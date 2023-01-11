@@ -33,9 +33,7 @@ fn main() {
         let cells = board.get_cells();
         for (y, row) in cells.iter().enumerate() {
             for (x, cell) in row.iter().enumerate() {
-                let rect = create_cell((x, y), *cell);
-
-                window.draw(&rect);
+                window.draw(&create_cell((x, y), *cell));
             }
         }
 

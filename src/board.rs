@@ -1,5 +1,3 @@
-use std::time;
-
 use rand::random;
 
 pub struct Board {
@@ -71,7 +69,7 @@ impl Board {
     }
 
     pub fn next_generation(&mut self) {
-        let start = time::Instant::now();
+        // let start = time::Instant::now();
 
         let mut new_board: Vec<Vec<bool>> = Vec::with_capacity(self.size.1);
 
@@ -97,6 +95,6 @@ impl Board {
         }
 
         self.board = new_board;
-        println!("next_generation: {:?}", time::Instant::elapsed(&start));
+        // println!("next_generation: {:?}", time::Instant::elapsed(&start));
     }
 }
